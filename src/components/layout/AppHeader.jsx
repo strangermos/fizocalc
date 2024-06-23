@@ -49,12 +49,14 @@ export default function AppHeader() {
     return (
       <Layout.Header style={headerStyle}>
         <div style={ container }>
-          <div style={buttonFizo}>
-            FIZO
-          </div>
-          <div style={buttonCalc}>
-            Calc
-          </div>
+          <a href='/'>
+            <div style={buttonFizo} translate='no'>
+              FIZO
+            </div>
+            <div style={buttonCalc} translate='no'>
+              Calc
+            </div>
+          </a>
         </div>
       </Layout.Header>
     )

@@ -48,16 +48,15 @@ const buttonCalc = {
 export default function AppHeader() {
     return (
       <Layout.Header style={headerStyle}>
-        <div style={ container }>
-          <a href='/'>
+        <a href="/" style={ container }>
             <div style={buttonFizo} translate='no'>
               FIZO
             </div>
             <div style={buttonCalc} translate='no'>
               Calc
             </div>
-          </a>
-        </div>
+
+        </a>
       </Layout.Header>
     )
 }

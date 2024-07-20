@@ -42,7 +42,9 @@ export default function AppFooter() {
             width: 30,
             textAlign: 'center',
             marginRight: 10,
-          }} src="/mail.png">
+          }} 
+          alt='Нашли ошибку?'
+          src="/mail.png">
           </img>
           </a>
           <a href='https://t.me/+6txwtyawVv42ZDk6'>
@@ -53,7 +55,9 @@ export default function AppFooter() {
             marginRight: 10,
 
 
-          }} src="/telegram.png">
+          }}
+          alt='Группа в telegram'
+          src="/telegram.png">
 
           </img>
         </a>

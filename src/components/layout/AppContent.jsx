@@ -72,6 +72,8 @@ export default function AppContent() {
       minFivePlaseholder: '',
       maxFivePlaseholder: '',
 
+      itog: null,
+
     })
 
 
@@ -345,8 +347,15 @@ function handelSelectWeight(v) {
   setOwer((prev) => ({...prev, weightSelect: v}))
 
 }
+useEffect(() => {
+  const i = levelAssessment(ower.genderSelect, ower.categorySelect, ower.ageSelect, ower.colSelect, exercise.ballsOneExercise, exercise.ballsTwoExercise, exercise.ballsThreeExercise, exercise.ballsFourExercise, exercise.ballsFiveExercise)
+  setExercise((prev) => ({...prev, itog: i}))
+}, [ower.genderSelect, ower.categorySelect, ower.ageSelect, ower.colSelect, exercise.ballsOneExercise, exercise.ballsTwoExercise, exercise.ballsThreeExercise, exercise.ballsFourExercise, exercise.ballsFiveExercise])
 
-let itog = levelAssessment(ower.genderSelect, ower.categorySelect, ower.ageSelect, ower.colSelect, exercise.ballsOneExercise, exercise.ballsTwoExercise, exercise.ballsThreeExercise, exercise.ballsFourExercise, exercise.ballsFiveExercise)
+
+
+
+
 let arr = [
 
   {
@@ -866,7 +875,7 @@ return (
 {/* ---------------------------------------- */}
 <Col span={widthProject.right}>           
 
-{itog &&             <Card size="small" title="Оценка"
+{exercise.itog &&             <Card size="small" title="Оценка"
             style={{
               marginBottom: '10px'
             }}>
@@ -880,24 +889,24 @@ return (
                     <Typography.Title 
                       // style={{
                       // }}
-                      type={itog && (
-                        (itog[0].toString() === '2') ? 'danger' : 
-                        (itog[0].toString() === '3') ? 'warning' : 
-                        (itog[0].toString() === '4') ? 'secondary' : 
+                      type={exercise.itog && (
+                        (exercise.itog[0].toString() === '2') ? 'danger' : 
+                        (exercise.itog[0].toString() === '3') ? 'warning' : 
+                        (exercise.itog[0].toString() === '4') ? 'secondary' : 
                         'success'
                       )} // danger / success
                       level={5}
                       >              
                         {/* {itog && itog[0]}   */}
                         {
-                          itog && (
-                            (itog[0].toString() === '2') ? 'Неудовлетворительно' : 
-                            (itog[0].toString() === '3') ? 'Удовлетворительно' : 
-                            (itog[0].toString() === '4') ? 'Хорошо' : 
-                            (itog[0].toString() === '5 (3У)') ? 'Отлично (3 уровень)' : 
-                            (itog[0].toString() === '5 (2У)') ? 'Отлично (2 уровень)' : 
-                            (itog[0].toString() === '5 (1У)') ? 'Отлично (1 уровень)' : 
-                            (itog[0].toString() === '5 (ВУ)') ? 'Отлично (Высший уровень)' : null
+                          exercise.itog && (
+                            (exercise.itog[0].toString() === '2') ? 'Неудовлетворительно' : 
+                            (exercise.itog[0].toString() === '3') ? 'Удовлетворительно' : 
+                            (exercise.itog[0].toString() === '4') ? 'Хорошо' : 
+                            (exercise.itog[0].toString() === '5 (3У)') ? 'Отлично (3 уровень)' : 
+                            (exercise.itog[0].toString() === '5 (2У)') ? 'Отлично (2 уровень)' : 
+                            (exercise.itog[0].toString() === '5 (1У)') ? 'Отлично (1 уровень)' : 
+                            (exercise.itog[0].toString() === '5 (ВУ)') ? 'Отлично (Высший уровень)' : null
                           ) 
                         }  
                     </Typography.Title>
@@ -909,15 +918,15 @@ return (
                       style={{
                         textAlign: 'center',
                       }}
-                      type={itog && (
-                        (itog[0].toString() === '2') ? 'danger' : 
-                        (itog[0].toString() === '3') ? 'warning' : 
-                        (itog[0].toString() === '4') ? 'secondary' : 
+                      type={exercise.itog && (
+                        (exercise.itog[0].toString() === '2') ? 'danger' : 
+                        (exercise.itog[0].toString() === '3') ? 'warning' : 
+                        (exercise.itog[0].toString() === '4') ? 'secondary' : 
                         'success'
                       )} // danger / success
                       level={5}
                       >              
-                      {itog && itog[1]}
+                      {exercise.itog && exercise.itog[1]}
                       
                     </Typography.Text>
                 </Col>

@@ -40,7 +40,7 @@ export default function AppFooter() {
           <a href='mailto:fizocalc@mail.ru'>
           <img style={{
             width: 30,
-            height: 'auto',
+            height: 30,
             textAlign: 'center',
             marginRight: 10,
           }} 
@@ -52,7 +52,7 @@ export default function AppFooter() {
 
                   <img style={{
             width: 30,
-            height: 'auto',
+            height: 30,
             textAlign: 'center',
             marginRight: 10,
 

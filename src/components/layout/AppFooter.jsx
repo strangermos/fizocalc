@@ -30,12 +30,6 @@ export default function AppFooter() {
 	return (
 		<Layout.Footer style={footerStyle}>
 			<div style={container}>
-				<Row style={block}>
-					<Card>
-						{/* <!-- Yandex.RTB R-A-11874409-1 --> */}
-						<div id='yandex_rtb_R-A-11874409-1'></div>
-					</Card>
-				</Row>
 				<Row>
 					<Col span={4}></Col>
 					<Col span={16}>
@@ -79,6 +73,14 @@ export default function AppFooter() {
 						</a>
 					</Col>
 				</Row>
+			</div>
+			<div style={container}>
+				<Card>
+					<Row>
+						{/* <!-- Yandex.RTB R-A-11874409-1 --> */}
+						<div id='yandex_rtb_R-A-11874409-1'></div>
+					</Row>
+				</Card>
 			</div>
 		</Layout.Footer>
 	)

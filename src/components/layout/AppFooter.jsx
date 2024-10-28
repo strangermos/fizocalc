@@ -41,9 +41,8 @@ export default function AppFooter() {
 								}}
 							>
 								<Typography.Text>
-									Приказ Министра обороны РФ от 20 апреля 2023 г. № 230 "Об
-									утверждении Наставления по физической подготовке в Вооруженных
-									Силах Российской Федерации"
+									Приказ МО РФ от 20 апреля 2023 г. № 230 "Об утверждении
+									Наставления по физической подготовке в ВС РФ"
 								</Typography.Text>
 							</a>
 						</Col>
@@ -69,7 +68,7 @@ export default function AppFooter() {
 										marginRight: 10,
 									}}
 									alt='Группа в telegram'
-									src='/telegram.svg'
+									src='/telegram.png'
 								></img>
 							</a>
 						</Col>

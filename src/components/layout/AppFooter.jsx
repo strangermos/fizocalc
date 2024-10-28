@@ -68,7 +68,7 @@ export default function AppFooter() {
 										marginRight: 10,
 									}}
 									alt='Группа в telegram'
-									src='/telegram.svg'
+									src='/telegram-group.svg'
 								></img>
 							</a>
 						</Col>

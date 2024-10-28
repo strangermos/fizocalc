@@ -2,7 +2,7 @@ import { Card, Col, Layout, Row } from 'antd'
 import Typography from 'antd/es/typography/Typography'
 
 const block = {
-	width: '100%',
+	width: '50%',
 }
 
 const footerStyle = {

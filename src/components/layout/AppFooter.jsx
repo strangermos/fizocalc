@@ -76,12 +76,11 @@ export default function AppFooter() {
 			</div>
 			<div style={container}>
 				<Card>
-					<Row>
-						{/* <!-- Yandex.RTB R-A-11874409-1 --> */}
-						<div id='yandex_rtb_R-A-11874409-1'></div>
-					</Row>
+					<Row></Row>
 				</Card>
 			</div>
+			{/* <!-- Yandex.RTB R-A-11874409-1 --> */}
+			<div id='yandex_rtb_R-A-11874409-1'></div>
 		</Layout.Footer>
 	)
 }

@@ -28,59 +28,61 @@ export default function AppFooter() {
 		})
 	})
 	return (
-		<Layout.Footer style={footerStyle}>
-			<div style={container}>
-				<Row>
-					<Col span={4}></Col>
-					<Col span={16}>
-						<a
-							href='https://www.garant.ru/products/ipo/prime/doc/406972208/'
-							style={{
-								textAlign: 'center',
-							}}
-						>
-							<Typography.Text>
-								Приказ Министра обороны РФ от 20 апреля 2023 г. № 230 "Об
-								утверждении Наставления по физической подготовке в Вооруженных
-								Силах Российской Федерации"
-							</Typography.Text>
-						</a>
-					</Col>
-					<Col span={4}>
-						<a href='mailto:fizocalc@mail.ru'>
-							<img
+		<>
+			<Layout.Footer style={footerStyle}>
+				<div style={container}>
+					<Row>
+						<Col span={4}></Col>
+						<Col span={16}>
+							<a
+								href='https://www.garant.ru/products/ipo/prime/doc/406972208/'
 								style={{
-									width: 30,
-									height: 30,
 									textAlign: 'center',
-									marginRight: 10,
 								}}
-								alt='Нашли ошибку?'
-								src='/mail.png'
-							></img>
-						</a>
-						<a href='https://t.me/+6txwtyawVv42ZDk6'>
-							<img
-								style={{
-									width: 30,
-									height: 30,
-									textAlign: 'center',
-									marginRight: 10,
-								}}
-								alt='Группа в telegram'
-								src='/telegram.png'
-							></img>
-						</a>
-					</Col>
-				</Row>
-			</div>
-			<div style={container}>
-				<Card>
-					<Row></Row>
-				</Card>
-			</div>
+							>
+								<Typography.Text>
+									Приказ Министра обороны РФ от 20 апреля 2023 г. № 230 "Об
+									утверждении Наставления по физической подготовке в Вооруженных
+									Силах Российской Федерации"
+								</Typography.Text>
+							</a>
+						</Col>
+						<Col span={4}>
+							<a href='mailto:fizocalc@mail.ru'>
+								<img
+									style={{
+										width: 30,
+										height: 30,
+										textAlign: 'center',
+										marginRight: 10,
+									}}
+									alt='Нашли ошибку?'
+									src='/mail.png'
+								></img>
+							</a>
+							<a href='https://t.me/+6txwtyawVv42ZDk6'>
+								<img
+									style={{
+										width: 30,
+										height: 30,
+										textAlign: 'center',
+										marginRight: 10,
+									}}
+									alt='Группа в telegram'
+									src='/telegram.png'
+								></img>
+							</a>
+						</Col>
+					</Row>
+				</div>
+				<div style={container}>
+					<Card>
+						<Row></Row>
+					</Card>
+				</div>
+			</Layout.Footer>
 			{/* <!-- Yandex.RTB R-A-11874409-1 --> */}
 			<div id='yandex_rtb_R-A-11874409-1'></div>
-		</Layout.Footer>
+		</>
 	)
 }

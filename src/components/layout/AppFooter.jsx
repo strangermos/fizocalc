@@ -1,4 +1,4 @@
-import { Col, Layout, Row } from 'antd'
+import { Card, Col, Layout, Row } from 'antd'
 import Typography from 'antd/es/typography/Typography'
 
 const block = {
@@ -74,10 +74,10 @@ export default function AppFooter() {
 					</Col>
 				</Row>
 				<Row>
-					<Col>
+					<Card>
 						{/* <!-- Yandex.RTB R-A-11874409-1 --> */}
 						<div id='yandex_rtb_R-A-11874409-1'></div>
-					</Col>
+					</Card>
 				</Row>
 			</div>
 		</Layout.Footer>

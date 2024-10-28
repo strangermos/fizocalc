@@ -1,6 +1,10 @@
 import { Col, Layout, Row } from 'antd'
 import Typography from 'antd/es/typography/Typography'
 
+const block = {
+	backgroundColor: '#555',
+}
+
 const footerStyle = {
 	textAlign: 'center',
 	backgroundColor: '#fff',

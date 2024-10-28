@@ -17,8 +17,15 @@ const container = {
 }
 
 export default function AppFooter() {
+	window.yaContextCb.push(() => {
+		Ya.Context.AdvManager.render({
+			blockId: 'R-A-11874409-1',
+			renderTo: 'yandex_rtb_R-A-11874409-1',
+		})
+	})
 	return (
 		<Layout.Footer style={footerStyle}>
+			<div id='yandex_rtb_R-A-11874409-1'></div>
 			<div style={container}>
 				<Row>
 					<Col span={4}></Col>

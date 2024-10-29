@@ -1,4 +1,5 @@
 import { Col, Layout, Row } from 'antd'
+import Link from 'antd/es/typography/Link'
 import Typography from 'antd/es/typography/Typography'
 
 const block = {
@@ -59,7 +60,7 @@ export default function AppFooter() {
 									src='/mail.png'
 								></img>
 							</a>
-							<a href='https://t.me/+6txwtyawVv42ZDk6'>
+							<Link href='https://t.me/+6txwtyawVv42ZDk6'>
 								<img
 									style={{
 										width: 30,
@@ -70,7 +71,7 @@ export default function AppFooter() {
 									alt='Группа в telegram'
 									src='/telegram-group.svg'
 								></img>
-							</a>
+							</Link>
 						</Col>
 					</Row>
 				</div>

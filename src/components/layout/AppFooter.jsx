@@ -2,9 +2,7 @@ import { Col, Layout, Row } from 'antd'
 import Link from 'antd/es/typography/Link'
 import Typography from 'antd/es/typography/Typography'
 
-const block = {
-	width: '50%',
-}
+
 
 const footerStyle = {
 	textAlign: 'center',
@@ -22,12 +20,17 @@ const container = {
 }
 
 export default function AppFooter() {
-	window.yaContextCb.push(() => {
-		Ya.Context.AdvManager.render({
-			blockId: 'R-A-11874409-1',
-			renderTo: 'yandex_rtb_R-A-11874409-1',
+	// Yandex ads integration
+	if (typeof window !== 'undefined' && window.yaContextCb) {
+		window.yaContextCb.push(() => {
+			if (window.Ya && window.Ya.Context) {
+				window.Ya.Context.AdvManager.render({
+					blockId: 'R-A-11874409-1',
+					renderTo: 'yandex_rtb_R-A-11874409-1',
+				})
+			}
 		})
-	})
+	}
 	return (
 		<>
 			<Layout.Footer style={footerStyle}>
@@ -42,8 +45,8 @@ export default function AppFooter() {
 								}}
 							>
 								<Typography.Text>
-									Приказ МО РФ от 20 апреля 2023 г. № 230 "Об утверждении
-									Наставления по физической подготовке в ВС РФ"
+									Приказ МО РФ от 20 апреля 2023 г. № 230 &quot;Об утверждении
+									Наставления по физической подготовке в ВС РФ&quot;
 								</Typography.Text>
 							</a>
 						</Col>

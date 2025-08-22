@@ -27,13 +27,12 @@ const contentStyle = {
 	backgroundColor: '#fff',
 	padding: '1rem',
 }
-const onFinish = values => {}
+const onFinish = () => {}
 
 export default function AppContent() {
 	const [form] = Form.useForm()
 	//const { assets, gender, ages } = useCrypto()
-	const { assets, gender, ages, category, balls } = useContext(CryptoContext)
-	const [select, setSelect] = useState(false)
+	const { gender, ages, category, balls } = useContext(CryptoContext)
 
 	// State Выбор исходных данный
 	const [ower, setOwer] = useState({
@@ -100,15 +99,7 @@ export default function AppContent() {
 
 	let newAge = ages.filter(age => age.gender === ower.genderSelect)
 
-	useEffect(() => {
-		const keypress = event => {
-			if (event.key === '-') {
-				setSelect(true)
-			}
-		}
-		document.addEventListener('keypress', keypress)
-		return () => document.removeEventListener('keypress', keypress)
-	}, [])
+
 	///
 	let typeOfExercise = choiseSetOfExercise(
 		ower.genderSelect,
@@ -194,6 +185,12 @@ export default function AppContent() {
 		) {
 			a = 5
 		}
+		
+		// Убеждаемся, что a имеет значение по умолчанию
+		if (a === undefined) {
+			a = 80
+		}
+		
 		setOwer(prev => ({ ...prev, colSelect: a }))
 
 		form.setFieldsValue({
@@ -262,6 +259,12 @@ export default function AppContent() {
 		) {
 			a = 3
 		}
+		
+		// Убеждаемся, что a имеет значение по умолчанию
+		if (a === undefined) {
+			a = 80
+		}
+		
 		setOwer(prev => ({ ...prev, colSelect: a }))
 
 		form.setFieldsValue({
@@ -335,6 +338,12 @@ export default function AppContent() {
 		) {
 			a = 5
 		}
+		
+		// Убеждаемся, что a имеет значение по умолчанию
+		if (a === undefined) {
+			a = 80
+		}
+		
 		setOwer(prev => ({ ...prev, colSelect: a }))
 
 		form.setFieldsValue({
@@ -363,7 +372,8 @@ export default function AppContent() {
 		id.bal.forEach((e, i) => {
 			for (i in e) {
 				if (e[i] <= exercise.resultOneExercise) {
-					return (a = i)
+					a = i
+					return
 				}
 			}
 		})
@@ -376,7 +386,8 @@ export default function AppContent() {
 		exercise.arreyOneExercisr.forEach((e, i) => {
 			for (i in e) {
 				if (v.target.value >= e[i]) {
-					return (a = i)
+					a = i
+					return
 				}
 			}
 		})
@@ -394,7 +405,8 @@ export default function AppContent() {
 		id.bal.forEach((e, i) => {
 			for (i in e) {
 				if (e[i] <= exercise.resultTwoExercise) {
-					return (a = i)
+					a = i
+					return
 				}
 			}
 		})
@@ -407,7 +419,8 @@ export default function AppContent() {
 		exercise.arreyTwoExercisr.forEach((e, i) => {
 			for (i in e) {
 				if (v.target.value >= e[i]) {
-					return (a = i)
+					a = i
+					return
 				}
 			}
 		})
@@ -425,7 +438,8 @@ export default function AppContent() {
 		id.bal.forEach((e, i) => {
 			for (i in e) {
 				if (e[i] <= exercise.resultThreeExercise) {
-					return (a = i)
+					a = i
+					return
 				}
 			}
 		})
@@ -438,7 +452,8 @@ export default function AppContent() {
 		exercise.arreyThreeExercisr.forEach((e, i) => {
 			for (i in e) {
 				if (v.target.value >= e[i]) {
-					return (a = i)
+					a = i
+					return
 				}
 			}
 		})
@@ -456,7 +471,8 @@ export default function AppContent() {
 		id.bal.forEach((e, i) => {
 			for (i in e) {
 				if (e[i] <= exercise.resultFourExercise) {
-					return (a = i)
+					a = i
+					return
 				}
 			}
 		})
@@ -469,7 +485,8 @@ export default function AppContent() {
 		exercise.arreyFourExercisr.forEach((e, i) => {
 			for (i in e) {
 				if (v.target.value >= e[i]) {
-					return (a = i)
+					a = i
+					return
 				}
 			}
 		})
@@ -487,7 +504,8 @@ export default function AppContent() {
 		id.bal.forEach((e, i) => {
 			for (i in e) {
 				if (e[i] <= exercise.resultFiveExercise) {
-					return (a = i)
+					a = i
+					return
 				}
 			}
 		})
@@ -500,7 +518,8 @@ export default function AppContent() {
 		exercise.arreyFiveExercisr.forEach((e, i) => {
 			for (i in e) {
 				if (v.target.value >= e[i]) {
-					return (a = i)
+					a = i
+					return
 				}
 			}
 		})

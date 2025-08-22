@@ -794,7 +794,7 @@ export default function levelAssessment(
 			nawArrSumBalls.push(+arrSumBalls[i])
 		}
 	}
-	if (!!nawArrSumBalls.length) {
+	if (nawArrSumBalls.length > 0) {
 		if (nawArrSumBalls.length === col) {
 			return gradePeople(sampleAssessment, nawArrSumBalls)
 		}

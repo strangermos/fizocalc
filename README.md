@@ -1,8 +1,40 @@
-# React + Vite
+# Fizocalc - Калькулятор физической подготовки
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Веб-приложение для расчета и оценки физической подготовки на основе нормативов МО РФ.
 
-Currently, two official plugins are available:
+## Технологии
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React 18
+- Vite
+- Ant Design
+- ESLint
+
+## Установка и запуск
+
+```bash
+# Установка зависимостей
+npm install
+
+# Запуск в режиме разработки
+npm run dev
+
+# Сборка для продакшена
+npm run build
+
+# Проверка кода линтером
+npm run lint
+```
+
+## Функциональность
+
+- Выбор пола, возраста, категории и веса
+- Расчет баллов за упражнения
+- Оценка уровня физической подготовки
+- Адаптивный дизайн
+
+## Структура проекта
+
+- `src/components/` - React компоненты
+- `src/context/` - React контекст для управления состоянием
+- `src/utils/` - Утилиты и вспомогательные функции
+- `src/data.js` - Данные нормативов

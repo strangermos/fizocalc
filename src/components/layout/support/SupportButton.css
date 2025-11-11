@@ -1,0 +1,52 @@
+/* src/components/layout/support/SupportButton.css */
+.support-button {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	padding: 8px 16px;
+	border-radius: 6px;
+	font-weight: 500;
+	color: #666;
+	cursor: pointer;
+	transition: all 0.2s ease;
+}
+
+.support-button:hover {
+	color: #1890ff;
+	background-color: #fafafa;
+}
+
+.support-text {
+	font-size: 14px;
+	transition: all 0.2s ease;
+}
+
+/* На экранах меньше 390px - вертикальное расположение */
+@media (max-width: 389px) {
+	.support-button {
+		flex-direction: column;
+		gap: 2px;
+		padding: 10px 12px;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.support-text {
+		font-size: 11px;
+		line-height: 1;
+		letter-spacing: -0.2px;
+	}
+}
+
+/* На экранах меньше 340px - скрываем надпись */
+@media (max-width: 339px) {
+	.support-text {
+		display: none;
+	}
+
+	.support-button {
+		padding: 8px 10px;
+		flex-direction: row; /* Возвращаем к горизонтальному виду когда текст скрыт */
+		gap: 0;
+	}
+}

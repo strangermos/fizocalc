@@ -1,15 +1,17 @@
+// src/components/layout/AppHeader.jsx
+'use client'
+
 import { Layout } from 'antd'
+import { SupportButton } from './support/support-button' // Исправленный путь
 
 const headerStyle = {
 	color: '#000',
 	height: 80,
 	backgroundColor: '#fff',
-	// borderBottomStyle: 'solid',
-	// borderBottomColor: '#999',
-	// borderBottomWidth: '1px',
 	padding: '1rem',
 	paddingTop: 0,
 }
+
 const container = {
 	maxWidth: '1100px',
 	boxSizing: 'content-box',
@@ -19,7 +21,14 @@ const container = {
 	marginRight: 'auto',
 	height: 80,
 	display: 'flex',
+	justifyContent: 'space-between',
+	alignItems: 'center',
 }
+
+const logoContainer = {
+	display: 'flex',
+}
+
 const buttonFizo = {
 	backgroundColor: '#000',
 	color: '#fff',
@@ -32,6 +41,7 @@ const buttonFizo = {
 	justifyContent: 'center',
 	width: '120px',
 }
+
 const buttonCalc = {
 	color: '#000',
 	height: '100%',
@@ -48,12 +58,7 @@ export default function AppHeader() {
 	return (
 		<Layout.Header style={headerStyle}>
 			<div style={container}>
-				<a
-					href='/'
-					style={{
-						display: 'flex',
-					}}
-				>
+				<a href='/' style={logoContainer}>
 					<div style={buttonFizo} translate='no'>
 						FIZO
 					</div>
@@ -61,6 +66,9 @@ export default function AppHeader() {
 						Calc
 					</div>
 				</a>
+
+				{/* Кнопка поддержки проекта */}
+				<SupportButton />
 			</div>
 		</Layout.Header>
 	)

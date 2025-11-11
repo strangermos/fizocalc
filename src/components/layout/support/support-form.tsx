@@ -14,7 +14,7 @@ export const SupportForm = ({ onCancel }: ISupportFormProps) => {
 	return (
 		<Card
 			title='Финансовая поддержка'
-			style={{ width: '100%', maxWidth: 400, margin: '0 auto' }}
+			style={{ width: '100%', maxWidth: 400, margin: '0 auto', border: 0 }}
 		>
 			<div style={{ textAlign: 'center', padding: '16px 0' }}>
 				<div style={{ marginBottom: '20px' }}>
